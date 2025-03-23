@@ -34,7 +34,7 @@ A fully functional Job Portal web application built using the MERN stack (MongoD
 
 ### 🔥 Clone the Repository
 ```bash
-git clone https://github.com/pankajydv15/job-portal.git
+git clone https://github.com/pankajydv15/job-portal-backend.git
 cd job-portal
 ```
 
