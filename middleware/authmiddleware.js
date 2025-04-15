@@ -11,6 +11,7 @@ const authenticateToken = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, "secretKey");
     req.user = decoded; // Attach user info to the request
+    console.log("Decoded user:", decoded); 
     next();
   } catch (error) {
     console.error("Auth Middleware Error:", error.message);

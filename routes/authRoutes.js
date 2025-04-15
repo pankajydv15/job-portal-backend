@@ -7,6 +7,7 @@ const {
   updateProfile,
 } = require("../controller/authControler");
 
+
 const authenticateToken = require("../middleware/authMiddleware");
 const authorizeRole = require("../middleware/authorizeRole");
 
@@ -35,5 +36,7 @@ router.get(
   authorizeRole("Admin"),
   (req, res) => res.status(200).json({ message: "Welcome to Admin Dashboard" })
 );
+
+
 
 module.exports = router;

@@ -6,7 +6,7 @@ const bodyParser= require("body-parser")
 const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoutes = require("./routes/authRoutes")
-// const jobseekerProfileRoutes = require('./routes/jobseekerProfileRoutes');  
+const jobRoutes = require("./routes/jobRoutes") 
 
 
 const corsOptions = {
@@ -28,8 +28,8 @@ app.get('/', (req, res) => {
 
 app.use("/api/auth",authRoutes)
 app.use("/api/users", require("./routes/authRoutes"));
+app.use("/api/job",jobRoutes)
 
-// app.use('/api/jobseeker', jobseekerProfileRoutes);
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
